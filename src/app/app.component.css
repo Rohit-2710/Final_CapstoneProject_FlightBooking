@@ -1,0 +1,67 @@
+.container{
+    margin:0;
+    position: sticky;
+
+    
+
+}
+.container-fluid-app{
+    padding:0;
+    min-height: 100vh;
+    background-image: url('../assets/flight asset.jpg');
+    background-size: cover;
+    
+}
+
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    border: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.logo{
+    color: white;
+    font-style: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    
+}
+.logo:hover{
+    cursor: pointer;
+    
+
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    list-style-type: none;
+}
+.link-internal{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 0;
+
+}
+
+.div{
+    justify-content: center;
+}
+
+.link-internal:hover{
+    
+    color: blue;
+    
+    cursor:pointer;
+    
+}
+.links:hover{
+    text-decoration: none;
+}

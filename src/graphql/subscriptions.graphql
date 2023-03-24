@@ -1,0 +1,103 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateFlight($filter: ModelSubscriptionFlightFilterInput) {
+  onCreateFlight(filter: $filter) {
+    id
+    flightID
+    flightName
+    start
+    end
+    ticket {
+      items {
+        id
+        name
+        noOfTickets
+        bookingID
+        createdAt
+        updatedAt
+        flightTicketId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateFlight($filter: ModelSubscriptionFlightFilterInput) {
+  onUpdateFlight(filter: $filter) {
+    id
+    flightID
+    flightName
+    start
+    end
+    ticket {
+      items {
+        id
+        name
+        noOfTickets
+        bookingID
+        createdAt
+        updatedAt
+        flightTicketId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteFlight($filter: ModelSubscriptionFlightFilterInput) {
+  onDeleteFlight(filter: $filter) {
+    id
+    flightID
+    flightName
+    start
+    end
+    ticket {
+      items {
+        id
+        name
+        noOfTickets
+        bookingID
+        createdAt
+        updatedAt
+        flightTicketId
+      }
+      nextToken
+    }
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateTicket($filter: ModelSubscriptionTicketFilterInput) {
+  onCreateTicket(filter: $filter) {
+    id
+    name
+    noOfTickets
+    bookingID
+    createdAt
+    updatedAt
+    flightTicketId
+  }
+}
+subscription OnUpdateTicket($filter: ModelSubscriptionTicketFilterInput) {
+  onUpdateTicket(filter: $filter) {
+    id
+    name
+    noOfTickets
+    bookingID
+    createdAt
+    updatedAt
+    flightTicketId
+  }
+}
+subscription OnDeleteTicket($filter: ModelSubscriptionTicketFilterInput) {
+  onDeleteTicket(filter: $filter) {
+    id
+    name
+    noOfTickets
+    bookingID
+    createdAt
+    updatedAt
+    flightTicketId
+  }
+}

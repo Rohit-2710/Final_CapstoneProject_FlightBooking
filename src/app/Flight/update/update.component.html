@@ -1,0 +1,37 @@
+<div class="container-fluid-add" *ngIf="!submitted">
+    <div class="form">
+        <div class="text">
+            <h2>Update Flight</h2>
+        </div>
+        <div class="container-add">
+            <form class="form-group-add"
+            required 
+            [formGroup]="myForm"
+            (submit)="updateFlight(myForm.value)"               
+            >
+           <div class="input-field"> <label class="label" for="flightID"> Flight ID</label>
+                  <input type="text" class="form-input-add" formControlName="flightID" placeholder="Add Flight ID">
+                  <div *ngIf="myForm.controls['flightID'].invalid && (myForm.controls['flightID'].dirty || myForm.controls['flightID'].touched)" >
+                    <h3 class="alert">Please enter valid flight ID</h3>
+                </div>
+           </div>
+           <div class="input-field">  <label class="label" for="flightName"> Flight Name</label>
+                  <input type="text" class="form-input-add" formControlName="flightName" placeholder="Add Flight name">
+                  <div *ngIf="myForm.controls['flightName'].invalid && (myForm.controls['flightName'].dirty || myForm.controls['flightName'].touched)" >
+                    <h3 class="alert">Please enter valid flight Name</h3>
+                </div>
+    
+           </div>
+           <button class="btn btn-primary" value="submit" style="margin-bottom: 5px;">Submit</button>
+        </form>
+        </div>
+    </div> 
+</div>
+<div class="submitted" *ngIf="submitted">
+    <div class="message"><h3>You have successfully added a flight</h3></div>
+    <div class="buttons">
+        <button class="btn btn-primary" style="margin-right: 10px;" (click)="reset()">Add another Flight</button>
+        <button class="btn btn-info" routerLink="list">List Flights</button>
+    </div>
+</div>
+

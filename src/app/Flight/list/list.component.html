@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="container" style="margin-top: 20px
+    ;">
+        <table class="table-list">
+        <thead class="thead-dark">
+            <tr scope="row">
+                <td>Flight ID</td>
+                <td>Flight Name</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr scope="row" *ngFor="let d of data" class="rows">
+                <td>{{d.flightID}}</td>
+                <td>{{d.flightName}}</td>
+                <td><button class="btn btn-danger" (click)="deleteFlight(d.id)">Delete</button>
+                    <button class="btn btn-primary" (click)="update(d.id)" routerLink="update">Update</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="container-fluid-add" *ngIf="!submitted">
+    <div class="form">
+        <div class="text">
+            <h2>Add Ticket</h2>
+        </div>
+        <div class="container-add">
+            <form class="form-group-add"
+            required 
+            [formGroup]="myForm"
+            (submit)="addTicket(myForm.value)"               
+            >
+           <div class="input-field"> <label class="label" for="bookingID"> Booking ID</label>
+                  <input type="text" class="form-input-add" formControlName="bookingID" placeholder="Add Booking ID">
+                  <div *ngIf="myForm.controls['bookingID'].invalid && (myForm.controls['bookingID'].dirty || myForm.controls['bookingID'].touched)" >
+                    <h3 class="alert">Please enter valid Booking ID</h3>
+                </div>
+           </div>
+           <div class="input-field">  <label class="label" for="name">Passanger Name</label>
+                  <input type="text" class="form-input-add" formControlName="name" placeholder="Add Passenger name">
+                  <div *ngIf="myForm.controls['name'].invalid && (myForm.controls['name'].dirty || myForm.controls['name'].touched)" >
+                    <h3 class="alert">Please enter valid Passenger Name</h3>
+                </div>
+           </div>
+           <div class="input-field">  <label class="label" for=""> No of tickets</label>
+            <input type="text" class="form-input-add" formControlName="noOfTickets" placeholder="Number of Tickets">
+            <div *ngIf="myForm.controls['noOfTickets'].invalid && (myForm.controls['noOfTickets'].dirty || myForm.controls['noOfTickets'].touched)" >
+              <h3 class="alert">Please enter valid number of tickets</h3>
+          </div>
+     </div>
+           
+           <button class="btn btn-primary" value="submit" style="margin-bottom: 5px;" >Submit</button>
+        </form>
+        </div>
+    </div> 
+</div>
+<div class="submitted" *ngIf="submitted">
+    <div class="message"><h3>You have successfully added a Ticket</h3></div>
+    <div class="buttons">
+        <button class="btn btn-primary" style="margin-right: 10px;" (click)="reset()">Add another ticket</button>
+        <button class="btn btn-info" routerLink="list">List Tickets</button>
+    </div>
+</div>
+

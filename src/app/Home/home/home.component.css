@@ -1,0 +1,43 @@
+.container-fluid-home{
+    margin:0;
+    background: none;
+    min-height: 100%;
+    min-width: 100%;
+    padding:0;
+    
+}
+.container-home{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding:0px 40px;
+    border:0;
+
+
+}
+.welcome-text{
+    color:purple;
+    font-style: bold;
+    font-size: 40px;
+}
+.boxes1{
+    display: flex;
+    justify-content: end;
+    padding:30px 0px;
+}
+.boxes2{
+    display: flex;
+    justify-content: start;
+    padding:30px 0px;
+}
+.guidelines{
+    font-style: bold;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+.guides{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: bold;
+}

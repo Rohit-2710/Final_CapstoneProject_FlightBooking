@@ -1,0 +1,37 @@
+<div class="container-fluid-ticket">
+    <div class="container-ticket">
+        <div class="card-outer" *ngFor="let d of data">
+            <div class="card-head">
+                <h3>{{d.flightID}}</h3>
+                <button class="btn btn-primary" (click)="addTicket(d.id)" routerLink="add">Add Ticket</button>
+            </div>
+            <div class="card-inner">
+                <div class="table-card-div">
+                    <table class="table-card">
+                        <thead class="head">
+                            <tr class="row-head">
+                                <td>Booking ID</td>
+                                <td>Name</td>
+                                <td>Number of Tickets</td>
+                                <td>Amount</td>
+                                <td>Actions</td>
+                            </tr>
+                        </thead>
+                        <tbody class="body">
+                            <tr class="row-body" *ngFor="let n of d.ticket.items">
+                                <td>{{n.bookingID}}</td>
+                                <td>{{n.name}}</td>
+                                <td>{{n.noOfTickets}}</td>
+                                <td>{{n.noOfTickets*2000}}</td>
+                                <td><button class="btn btn-danger" *ngIf="n.noOfTickets*2000>5000" (click)="deleteTicket(n.id)">Delete Ticket</button>
+                                    <button class="btn btn-primary" style="margin-left:5px">Update</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
